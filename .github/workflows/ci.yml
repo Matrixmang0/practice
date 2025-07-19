@@ -57,7 +57,7 @@ jobs:
         source .env/bin/activate
         mkdir artifacts
         uv pip install pytest
-        python3 test.py 2>&1 > test_output.txt
+        pytest test.py -v | tee test_output.txt
   
     - name: Setup CML
       uses: iterative/setup-cml@v2
