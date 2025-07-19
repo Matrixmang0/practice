@@ -1,0 +1,13 @@
+project: Feast
+registry: gs://mlops-course-neural-mantra-461520-m0/practice/feast/registry.db
+provider: gcp
+entity_key_serialization_version: 2
+
+offline_store:
+  type: bigquery
+  dataset: PRACTICE_OPPE
+
+online_store:
+  type: datastore
+  project_id: neural-mantra-461520-m0
+  namespace: PRACTICE_OPPE_ONLINE
