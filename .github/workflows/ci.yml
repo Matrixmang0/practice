@@ -50,7 +50,9 @@ jobs:
     - name: Set up DVC
       run: |
         source .env/bin/activate
-        #    dvc pull data
+        dvc remote add remote gs://mlops-course-neural-mantra-461520-m0/practice
+        dvc remote default remote
+        dvc pull data
     
     - name: Run tests 
       run: |
