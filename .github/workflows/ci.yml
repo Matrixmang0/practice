@@ -50,7 +50,7 @@ jobs:
     - name: Set up DVC
       run: |
         source .env/bin/activate
-        #    dvc pull data
+        dvc pull -f data
     
     - name: Run tests 
       run: |
